@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Overlay</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Add in <head> -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <!-- Add in <head> of HTML -->
+  <!-- Add in <head> -->
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="qr-box"></div>
+    <div class="center-digit"></div>
+    <div class="progress-bar">
+        <div class="progress-fill"></div>
+    </div>
+
+    <!-- Countdown timer 
+    <div class="timer" id="countdown">Expires in 00:59:59</div> -->
+    <div class="timer">
+        <span class="text" id="countdown">Expires in</span>
+    </div>
+
+    <div class="colorbar-overlay">
+      <div class="white-box"></div>
+      <div class="blinker"></div>
+    </div>
+    <div class="colorbar-overlay">
+        <div class="white-box"></div>
+        <div class="blinker">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+        </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+:root {
+  --box-color: #628845; /* Change QR box color here */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  font-family: sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 390px;       /* iPhone 14 width */
+  height: 844px;      /* iPhone 14 height */
+  background: url('IMG_8910.PNG') no-repeat center center/cover;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+/* Static QR box */
+.qr-box {
+  position: absolute;
+  top: 117px;      /* distance from the top in pixels */
+  left: 105px;
+  width: 150px;
+  height: 150px;
+  border: 15px solid var(--box-color);
+  border-radius: 12px;
+}
+
+.center-digit::before {
+    content: "3";              /* <-- change number here */
+    position: absolute;
+    top: 402.8px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 60px;          /* adjust to match your ticket */
+    font-weight: 870;          /* strong bold like iOS wallet */
+    color: black;
+    line-height: 1;
+    background-color: rgb(255, 255, 255);
+
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro", 
+                 "SF Pro Display", "SF Pro Text", Helvetica, Arial, sans-serif;
+
+    pointer-events: none;      /* avoid blocking clicks */
+    user-select: none;
+}
+
+.center-digit {
+    position: absolute;
+    inset: 0;   /* occupies full container */
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 145.5px;              /* adjust to perfect position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;              /* length of bar */
+    height: 4px;               /* thin */
+    background-color: rgba(255,255,255,0.4); 
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;                 /* will update with JS */
+    background-color: #1E86D6;   /* fill color */
+    transition: width 0.5s linear;
+}
+
+/* Countdown timer above color bar */
+.timer {
+  position: absolute;
+  bottom: 104.5px;   /* slightly above color bar */
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  font-size: 21px;
+  font-weight: bold;
+  /*letter-spacing: 0.25px;*/
+  text-align: center;
+
+  background-color: rgb(255, 255, 255);  /* semi-transparent black box */
+  padding: 0 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "SF Pro Display",
+               "SF Pro Text", Helvetica, Arial, sans-serif;
+}
+
+/* Apply letter-spacing only to letters, not spaces */
+.timer .text {
+  letter-spacing: 0.25px;
+}
+
+/* Numbers with same spacing */
+.timer .time {
+  letter-spacing: 0px;
+}
+
+/* Color bar overlay */
+.colorbar-overlay {
+  position: absolute;
+  bottom: 164px;   /* fine-tuned for color bar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 20.5px;
+}
+
+/* White box on the color bar */
+.white-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 0px;
+  opacity: 0.8;
+}
+
+/* Blinking overlay */
+.blinker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 8px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Blinking box colors (simple on/off blink) */
+.colorbar-overlay .color1 { background-color: #628845; }
+.colorbar-overlay .color2 { background-color: #C48A56; }
+.colorbar-overlay .color3 { background-color: #E7A8F1; }
+
+.colorbar-overlay .blinker {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.colorbar-overlay .blinker div {
+  flex: 1;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
