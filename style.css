@@ -1,5 +1,5 @@
 :root {
-  --box-color: #3384FE; /*Red QR box */
+  --box-color: #C284C2; /*Red QR box */
 }
 
 body, html {
@@ -141,9 +141,9 @@ body, html {
 }
 
 /* Blinking box colors (simple on/off blink) */
-.colorbar-overlay .color1 { background-color: #80B3EC; }
-.colorbar-overlay .color2 { background-color: #F83EBD; }
-.colorbar-overlay .color3 { background-color: #50638F; }
+.colorbar-overlay .color1 { background-color: #8AA9EE; }
+.colorbar-overlay .color2 { background-color: #D67AE2; }
+.colorbar-overlay .color3 { background-color: #B060A8; }
 
 .colorbar-overlay .blinker {
   display: flex;
