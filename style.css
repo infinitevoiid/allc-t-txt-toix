@@ -141,9 +141,9 @@ body, html {
 }
 
 /* Blinking box colors (simple on/off blink) */
-.colorbar-overlay .color1 { background-color: #AB08EF; }
-.colorbar-overlay .color2 { background-color: #B36C26; }
-.colorbar-overlay .color3 { background-color: #8E6E10; }
+.colorbar-overlay .color1 { background-color: #73E0DA; }
+.colorbar-overlay .color2 { background-color: #C9BBEF; }
+.colorbar-overlay .color3 { background-color: #08DA65; }
 
 .colorbar-overlay .blinker {
   display: flex;
